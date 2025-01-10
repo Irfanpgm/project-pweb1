@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon & Star Hotel</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Gaya tambahan untuk elemen khusus */
+        header {
+            background-image: url('https://www.decotel.com/wp-content/uploads/2024/03/Background-11-Entrance-Header-3-1600x0-c-default.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 24px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.974);
+        }
+
+        footer {
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        .gallery img {
+            object-fit: cover;
+            height: 200px;
+            width: 100%;
+        }
+
+        .gallery p {
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        .nav-link {
+            text-align: center;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .facility img {
+            object-fit: cover;
+            height: 600px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MOON & STAR HOTEL</h1>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Kamar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalPemesanan">Pesan Sekarang</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Fasilitas</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#kolamRenang">Kolam Renang</a></li>
+                            <li><a class="dropdown-item" href="#pusatKebugaran">Pusat Kebugaran</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <div class="row">
+            <!-- Galeri Kamar -->
+            <div class="col-md-12">
+                <h3>Kamar</h3>
+                <div class="row g-4">
+                    <div class="col-4">
+                        <p>Standar</p>
+                        <img src="https://images.pexels.com/photos/210604/pexels-photo-210604.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid rounded" alt="Kamar Standar">
+                        <p>Harga: Rp 500.000/malam</p>
+                    </div>
+                    <div class="col-4">
+                        <p>Deluxe</p>
+                        <img src="https://images.pexels.com/photos/3659683/pexels-photo-3659683.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid rounded" alt="Kamar Deluxe">
+                        <p>Harga: Rp 750.000/malam</p>
+                    </div>
+                    <div class="col-4">
+                        <p>Family</p>
+                        <img src="https://images.pexels.com/photos/1743231/pexels-photo-1743231.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid rounded" alt="Kamar Family">
+                        <p>Harga: Rp 1.000.000/malam</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Galeri Fasilitas -->
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <h3 id="kolamRenang">Kolam Renang</h3>
+                <div class="facility">
+                    <img src="https://bumipancasona.com/wp-content/uploads/2023/01/4.renang-c.jpg" class="img-fluid rounded" alt="Kolam Renang">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <h3 id="pusatKebugaran">Pusat Kebugaran</h3>
+                <div class="facility">
+                    <img src="https://media.istockphoto.com/id/903405254/id/foto/pusat-gym-kecil-di-hotel-resor.jpg?s=612x612&w=0&k=20&c=86ypUW6Cdl_mO0QxmQcM_2KwUpYB8W9eaiY4N71hXos=" class="img-fluid rounded" alt="Pusat Kebugaran">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 MOON & STAR HOTEL
+    </footer>
+
+   <!-- Modal Pemesanan -->
+   <div class="modal fade" id="modalPemesanan" tabindex="-1" aria-labelledby="modalPemesananLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalPemesananLabel">Form Pemesanan</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="formPemesanan">
+                    <div class="mb-3">
+                        <label for="namaPemesan" class="form-label">Nama Pemesan</label>
+                        <input type="text" class="form-control" id="namaPemesan" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="jenisKelamin" class="form-label">Jenis Kelamin</label>
+                        <select class="form-select" id="jenisKelamin" required>
+                            <option value="">--Pilih--</option>
+                            <option value="Laki-laki">Laki-laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nomorIdentitas" class="form-label">Nomor Identitas</label>
+                        <input type="text" class="form-control" id="nomorIdentitas" maxlength="16" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="jenisKamar" class="form-label">Tipe Kamar</label>
+                        <select class="form-select" id="jenisKamar" required>
+                            <option value="standar">Standar</option>
+                            <option value="deluxe">Deluxe</option>
+                            <option value="family">Family</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="durasiMenginap" class="form-label">Durasi Menginap (malam)</label>
+                        <input type="number" class="form-control" id="durasiMenginap" min="1" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="includeBreakfast" class="form-label">Termasuk Breakfast</label>
+                        <input type="checkbox" id="includeBreakfast">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                </form>
+                <div class="resume mt-4" id="resumePemesanan" style="display: none;">
+                    <h5>Resume Pemesanan</h5>
+                    <p><strong>Nama:</strong> <span id="resumeNama"></span></p>
+                    <p><strong>Jenis Kelamin:</strong> <span id="resumeKelamin"></span></p>
+                    <p><strong>Nomor Identitas:</strong> <span id="resumeIdentitas"></span></p>
+                    <p><strong>Tipe Kamar:</strong> <span id="resumeKamar"></span></p>
+                    <p><strong>Durasi:</strong> <span id="resumeDurasi"></span> malam</p>
+                    <p><strong>Breakfast:</strong> <span id="resumeBreakfast"></span></p>
+                    <p><strong>Total Harga:</strong> Rp <span id="resumeTotal"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.getElementById('formPemesanan').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const hargaPerTipe = { standar: 500000, deluxe: 750000, family: 1000000 };
+        const nama = document.getElementById('namaPemesan').value;
+        const kelamin = document.getElementById('jenisKelamin').value;
+        const identitas = document.getElementById('nomorIdentitas').value;
+        const kamar = document.getElementById('jenisKamar').value;
+        const durasi = parseInt(document.getElementById('durasiMenginap').value);
+        const includeBreakfast = document.getElementById('includeBreakfast').checked;
+
+        let total = hargaPerTipe[kamar] * durasi;
+        if (includeBreakfast) total += durasi * 80000;
+
+        document.getElementById('resumeNama').textContent = nama;
+        document.getElementById('resumeKelamin').textContent = kelamin;
+        document.getElementById('resumeIdentitas').textContent = identitas;
+        document.getElementById('resumeKamar').textContent = kamar.charAt(0).toUpperCase() + kamar.slice(1);
+        document.getElementById('resumeDurasi').textContent = durasi;
+        document.getElementById('resumeBreakfast').textContent = includeBreakfast ? 'Ya' : 'Tidak';
+        document.getElementById('resumeTotal').textContent = total.toLocaleString('id-ID');
+
+        document.getElementById('resumePemesanan').style.display = 'block';
+    });
+</script>
+</body>
+</html>
